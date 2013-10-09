@@ -1,0 +1,42 @@
+<section class="sign-in">
+	<header class="sign-in__logo">
+		SAFIRA
+	</header>
+
+	<% if flash[:notice] %>
+		<div class="alert--notice">
+			<%= flash[:notice] %>
+		</div>
+	<% end %>
+	<% if flash[:alert] %>
+		<div class="alert--warning">
+			<%= flash[:alert] %>
+		</div>
+	<% end %>
+
+	<h2>Formulário de cadastro</h2>
+	</p>
+	<div class="body">	
+		<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+		  <div class="form-inputs">
+		    <%= f.input :email, :placeholder => "Email", :required => true, :autofocus => true, :label => false %>
+		    <%= f.input :password, :placeholder => "Senha", :required => true, :label => false %>
+		    <%= f.input :password_confirmation, :placeholder => "Confirmação de senha", :required => true, :label => false %>
+		    <div class="sign-in__forgot-password pull-right">
+			    	<%= link_to "Já possui cadastro?", new_user_session_path %>
+			</div>
+		  </div>
+
+		  <div class="form-actions">
+		    <%= f.button :submit, "EFETUAR CADASTRO", :class=> "btn--primary btn--full-width" %>
+		  </div>
+		<% end %>
+	</div>
+</section>
+
+<footer class="footer-notes">
+	<div class="copyright">
+		2013 © 4Soft
+	</div>
+</footer>

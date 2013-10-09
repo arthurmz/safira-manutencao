@@ -1,0 +1,41 @@
+<header class="header">
+  <div class="wrapper">
+  
+    <div class="header__logo">
+      SAFIRA
+      <small class="beta">ALPHA</small>
+    </div>
+
+    <nav class="header__navigation">
+      <ul class="header__navigation__list">
+        <li class="header__navigation__item">
+          <div class="dropdown">
+            <a data-toggle="dropdown" href="#">
+              <div class="header__user-session">
+                <div class="user-session">
+                  <div class="user-session__avatar" style="background-image: url(<%= gravatar_url current_user %>)"></div>
+                  <span class="user-session__username"><%= current_user.name %></span>
+                  <div class="arrow-down"></div>
+                </div>
+              </div>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li role="presentation"><%= link_to "Editar meus dados", edit_user_registration_path %></li>
+              <li><%= link_to "Sair", destroy_user_session_path, :method => "delete" %></li>
+            </ul>
+          </div>
+        </li>
+        <li class="header__navigation__item">
+          <a href="#">Feedback</a>
+        </li>
+        <li class="header__navigation__item">
+          <a href="/help">Ajuda</a>
+        </li>
+        <li class="header__navigation__item hide-tablet">
+          <%= link_to "Sair", destroy_user_session_path, :method => "delete" %>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>

@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord: 
+    errors:
+      messages: 
+        record_invalid: "Inserção inválida"
+  date:
+    order:
+      - :day
+      - :month
+      - :year

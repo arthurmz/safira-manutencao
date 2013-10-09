@@ -1,0 +1,25 @@
+// Colors
+
+$color_black: #252627;
+$color_darker_black: #18191a;
+$color_lighter_black: #3b3e40;
+
+$color_cloudy: #dfe4e5;
+$color_lighter_cloudy: #f2f8fa;
+
+$color_blue: #3498db;
+
+$color_green: #65c178;
+
+$color_red: #e74c3c;
+
+$color_gray: #bcbebe;
+
+// Neat variables
+@import "neat/neat-helpers";
+$mobile: new-breakpoint(max-width 767px 4);
+$tablet: new-breakpoint(min-width 768px 8);
+$desktop: new-breakpoint(min-width 1088px 12);
+
+$grid-columns: 4;   
+

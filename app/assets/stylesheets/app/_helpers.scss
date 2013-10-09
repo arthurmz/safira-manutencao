@@ -1,0 +1,29 @@
+.wrapper {
+  @include outer-container;
+  padding: 0 1em;
+}
+
+.pull-right {
+    float: right;
+}
+
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.hide-mobile {
+    display: none;
+    @include media($tablet) {
+        display: inline-block;
+    }
+}
+
+.hide-tablet {
+    @include media($tablet) {
+        display: none !important;
+    }
+}

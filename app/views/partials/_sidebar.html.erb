@@ -1,0 +1,14 @@
+<aside class="sidebar">
+	<ul>
+		<li class="heading"><span>PERFIL</span></li>
+		<li>
+			<%= link_to edit_user_registration_path do %>
+				<span class="sidebar__avatar" style="background-image: url(<%= gravatar_url current_user %>)"></span>
+				<%= current_user.name %>
+			<% end %>
+		</li>
+		<li><%= link_to 'Sair', destroy_user_session_path, :method => "delete" %></li>
+		<li class="heading"><span>Processo Seletivo</span></li>
+		<li><%= link_to 'Processos Abertos', selection_processes_path %></li>
+	</ul>
+</aside>

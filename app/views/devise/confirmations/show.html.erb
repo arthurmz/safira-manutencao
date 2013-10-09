@@ -1,0 +1,21 @@
+<section class="sign-in">
+
+    <header class="sign-in__logo">
+        SAFIRA
+    </header>
+
+	<h2>Escolha uma senha para acessar o site</h2>
+
+	<%= simple_form_for(resource, as: resource_name, url: confirm_path, html: { class: "form" }) do |f| %>
+	  <%= devise_error_messages! %>
+
+	  <div class="form-inputs">
+	    <%= f.input :password, :label => "Nova senha", :required => true, :autofocus => true %>
+	    <%= f.input :password_confirmation, :label => "Confirme", :required => true %>
+	  </div>
+
+	  <%= f.input :confirmation_token, as: :hidden %>
+
+	  <%= f.submit "Confirmar" %>
+	<% end %>
+</section>
