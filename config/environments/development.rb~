@@ -40,6 +40,6 @@ SIG::Application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.perform_deliveries = false
   config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
 end
